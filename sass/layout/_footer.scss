@@ -1,0 +1,59 @@
+footer {
+  background-color: $color-footer-bg;
+  padding: $spacing-sm 0;
+  color: white;
+
+  .footer-contenido {
+    @include flex-center;
+    gap: $spacing-xs;
+    max-width: $max-width-container;
+    margin: 0 auto;
+  }
+
+  .derechos-footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: $spacing-sm 0;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: $spacing-sm;
+    width: 100%;
+    padding: $spacing-sm;
+
+    .footer-item, .div1 {
+      padding: $spacing-xs;
+      text-align: center;
+      font-size: 0.85rem;
+
+      h4 {
+        font-size: 0.95rem;
+        margin-bottom: $spacing-xs;
+      }
+
+      p {
+        font-size: 0.75rem;
+        color: #ccc;
+      }
+    }
+
+    .div1 {
+      grid-area: 1 / 3 / 4 / 4;
+    }
+  }
+
+  .footer-logos {
+    @include flex-center(row);
+    gap: $spacing-xs;
+
+    .logotipo-footer {
+      width: 1.7rem;
+      height: 1.7rem;
+      @include hover-scale(1.2);
+      border-radius: 50%;
+    }
+  }
+}

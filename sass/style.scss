@@ -1,0 +1,31 @@
+// Utilities
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/extends';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/whatsapp';
+@import 'components/contacto';
+
+// Layout
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+
+// Media Queries
+@import 'mediaquerys/mq';
+
+// Globales
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+}
+
+body {
+  background-color: $color-light;
+  line-height: 1.5;
+}

@@ -1,0 +1,26 @@
+.btn {
+  &-header {
+    @extend %btn-base;
+    width: 15rem;
+    background-color: $color-primary;
+    padding: $spacing-md;
+    align-self: center;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &-card {
+    @extend %btn-base;
+    width: 100%;
+    background-color: $color-primary;
+    padding: $spacing-sm;
+    margin-top: auto;
+
+    &:hover {
+      background-color: $color-primary-hover;
+      transform: scale(1.03);
+    }
+  }
+}

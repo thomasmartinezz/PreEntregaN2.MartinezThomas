@@ -1,0 +1,31 @@
+.index-header {
+  background-image: url('../img/backgroundheader.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: $spacing-md;
+  @include flex-center;
+
+  &-flex {
+    @include flex-center;
+    gap: $spacing-sm;
+  }
+
+  .contenedor-inferior-header {
+    @include flex-center;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    gap: $spacing-sm;
+
+    .index-h1 {
+      color: $color-dark;
+      font-weight: $font-weight-bold;
+      font-size: 1.5rem;
+    }
+
+    .index-parrafoheader {
+      color: $color-dark;
+      font-weight: $font-weight-bold;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.card-enterito {
+  @include flex-center;
+  @include card-shadow;
+  background-color: $color-card-bg;
+  width: 100%;
+  max-width: $max-width-card;
+  border: 1px solid #ccc;
+  padding: $spacing-sm;
+  min-height: 520px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-7px);
+    border-color: $color-primary;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: $color-primary;
+      z-index: 1;
+    }
+
+    .btn-card-enterito {
+      background-color: $color-primary-hover;
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    max-height: 180px;
+    transition: transform 0.3s ease;
+  }
+
+  h4 {
+    margin: $spacing-xs 0 0.2rem;
+    font-weight: $font-weight-bold;
+    color: $color-dark;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: $spacing-xs;
+    color: lighten($color-dark, 20%);
+  }
+
+  /* --- ESTILOS ACTUALIZADOS DE PRECIOS --- */
+  &-precio {
+    color: $color-primary; // Verde GitHub
+    font-weight: $font-weight-bold;
+    margin-top: $spacing-sm;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    &::before {
+      content: "OFERTA";
+      background: $color-primary;
+      color: white;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    span {
+      color: lighten($color-dark, 40%);
+      text-decoration: line-through;
+      position: relative;
+      font-size: 0.9rem;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #ff6b6b; // Tachado rojo
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .btn-card-enterito {
+    @extend %btn-base;
+    width: 100%;
+    background-color: $color-primary;
+    padding: $spacing-sm;
+    margin-top: $spacing-md;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:hover {
+      transform: scale(1.08) !important;
+      background-color: darken($color-primary-hover, 5%);
+    }
+  }
+}

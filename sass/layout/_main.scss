@@ -1,0 +1,45 @@
+.index-main {
+  margin: $spacing-lg $spacing-sm;
+
+  .titulo-main {
+    text-align: center;
+    margin: $spacing-sm 0;
+    font-size: 1.2rem;
+    color: $color-dark;
+  }
+
+  .ultimos-modelos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-lg;
+  }
+}
+.contacto-main {
+  padding: $spacing-lg 0;
+  background-color: lighten($color-light, 2%);
+
+  .contacto-info {
+    background: white;
+    border-radius: 8px;
+    @include card-shadow;
+    
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btn-enviar {
+    background-color: $color-primary;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+}

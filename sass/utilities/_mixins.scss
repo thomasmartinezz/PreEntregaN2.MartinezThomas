@@ -1,0 +1,19 @@
+@mixin flex-center($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-shadow {
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@mixin hover-scale($scale: 1.05) {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  &:hover {
+    transform: scale($scale);
+  }
+}
